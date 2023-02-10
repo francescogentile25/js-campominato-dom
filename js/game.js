@@ -11,7 +11,7 @@ platBtnElement.addEventListener('click', startGame) //sen le tonde altrimenti vi
 const bombe = []
 while (bombe.length < 16) {
     const randomNumber = Math.floor(Math.random() * 64)
-    if (bombe.indexOf(randomNumber) ===  ??) {
+    if (bombe.indexOf(randomNumber) ===  -1) {
         bombe.push(randomNumber)
     }
 }
@@ -80,8 +80,12 @@ function onClick(event) {
 	console.log(event.target === this)
 	// const cella = event.target
 	const cella = this
-	console.log(cella.innerHTML)
+    const numCella = parseInt(cella.innerHTML);
+    console.log(numCella)
 
+    if (bombe.includes(numCella - 1)) {
+        console.log("Hai perso!");
+    }
 
 	cella.classList.add('bg-green')
 	cella.removeEventListener('click', onClick)
@@ -96,3 +100,5 @@ function onClick(event) {
 // 	let cella = event.target
 // 	cella.classList.add('bg-green')
 // })
+
+
