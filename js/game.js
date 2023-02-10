@@ -8,7 +8,15 @@ platBtnElement.addEventListener('click', startGame) //sen le tonde altrimenti vi
 
 // no numeri doppi
 // nuimeri compresi tra 1 3 numeroDiCelle
-const bombe = [5, 54, 9, 21, 36, 74]
+const bombe = []
+while (bombe.length < 16) {
+    const randomNumber = Math.floor(Math.random() * 64)
+    if (bombe.indexOf(randomNumber) ===  ??) {
+        bombe.push(randomNumber)
+    }
+}
+console.log(bombe)
+
 // startGame()
 // bombe.includes('5')
 
@@ -74,8 +82,6 @@ function onClick(event) {
 	const cella = this
 	console.log(cella.innerHTML)
 
-	const quadrato = parseInt(cella.innerHTML) ** 2
-	console.log(quadrato)
 
 	cella.classList.add('bg-green')
 	cella.removeEventListener('click', onClick)
