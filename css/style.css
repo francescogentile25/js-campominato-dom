@@ -21,6 +21,12 @@
 }
 
 
-.bg-green {
+.bg-gray {
     background-color:lightgray;
 }
+
+
+.bg-red{
+    background-color: red;
+}
+
